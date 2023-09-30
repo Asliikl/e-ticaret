@@ -20,13 +20,15 @@
                   <div class="x_title">
                     <h2>Genel Ayarlar<small>İşlem Durumu</small></h2>
 
-                    <?php
+
+                       <?php
                        if(isset($_GET['durum'])){
                         if($_GET['durum']=="ok"){?>
                           <b style="color: green;">İşlem başarılı</b>
                        <?php }  elseif($_GET['durum']=="no"){ ?>
                           <b style="color: red;">İşlem başarısız</b>
                        <?php }  }?>
+ 
           
 
                     <ul class="nav navbar-right panel_toolbox">
@@ -51,39 +53,32 @@
 
                     <form action="../netting/islem.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Site Başlığı<span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Analystic Kodu<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="ayar_title" required="required" value="<?php echo $ayarcek['ayar_title']; ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="ayar_analystic" required="required" value="<?php echo $ayarcek['ayar_analystic']; ?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Site Açıklaması<span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Maps<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="ayar_description" required="required" value="<?php echo $ayarcek['ayar_description']; ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="ayar_maps" required="required" value="<?php echo $ayarcek['ayar_maps']; ?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Site Anahtar Kelime<span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Zopim<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="ayar_keywords" required="required" value="<?php echo $ayarcek['ayar_keywords']; ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="ayar_zopim" required="required" value="<?php echo $ayarcek['ayar_zopim']; ?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Site Yazar<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="ayar_author" required="required" value="<?php echo $ayarcek['ayar_author']; ?>" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                    
+                 
                     
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button type="submit" name="genelayarkaydet" class="btn btn-primary">Güncelle</button>
+                          <button type="submit" name="apiayarkaydet" class="btn btn-primary">Güncelle</button>
                         </div>
                       </div>
 

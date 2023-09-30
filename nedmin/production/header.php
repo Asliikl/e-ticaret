@@ -7,6 +7,10 @@ $ayarsor->execute(array(
 ));
 $ayarcek=$ayarsor->fetch(PDO::FETCH_ASSOC);
 
+if(!$ayarcek){
+  die('hatali id');
+}
+
 ?>
 
 
@@ -76,7 +80,10 @@ $ayarcek=$ayarsor->fetch(PDO::FETCH_ASSOC);
                   <li><a><i class="fa fa-cogs"></i> Ayarlar <span class="fa fa-cogs"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="genel-ayar.php">Genel Ayarlar</a></li>
-                  
+                      <li><a href="iletisim-ayarlar.php">İletişim Ayarları</a></li>
+                      <li><a href="api-ayarlar.php">Api Ayarları</a></li>
+                      <li><a href="sosyal-ayarlar.php">Sosyal Medya Ayarları</a></li>
+                      <li><a href="mail-ayarlar.php">Mail Ayarları</a></li>
                     </ul>
                   </li>
             
