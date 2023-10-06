@@ -130,4 +130,32 @@ if(isset($_POST['sosyalayarkaydet'])){
     }
 }
 
+
+
+if(isset($_POST['hakkimizdakaydet'])){
+
+    //güncelleme işlemleri
+    $hakkimizdakaydet=$db->prepare("UPDATE hakkimizda SET
+    hakkimizda_baslik=:hakkimizda_baslik,
+    hakkimizda_icerik=:hakkimizda_icerik,
+    hakkimizda_video=:hakkimizda_video,
+    hakkimizda_vizyon=:hakkimizda_vizyon
+    WHERE hakkimizda_id=0
+    ");
+    $update=$hakkimizdakaydet->execute(array(
+        'hakkimizda_baslik'=>$_POST['hakkimizda_baslik'],
+        'hakkimizda_icerik'=>$_POST['hakkimizda_icerik'],
+        'hakkimizda_video'=>$_POST['hakkimizda_video'],
+        'hakkimizda_vizyon'=>$_POST['hakkimizda_vizyon'] 
+    ));
+
+    if($update){
+        header("Location:../production/hakkimizda.php?durum=ok");
+    }
+    else{
+        header("Location:../production/hakkimizda.php?durum=no");
+    }
+}
+
+
 ?>
