@@ -14,6 +14,9 @@ if(!$hakkimizdacek){
 
 ?>
 
+<head>
+<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+</head>
 
 <?php include 'header.php' ?>
         <!-- page content -->
@@ -81,6 +84,8 @@ if(!$hakkimizdacek){
                           <input type="text" id="first-name" name="hakkimizda_icerik" required="required" value="<?php echo $hakkimizdacek['hakkimizda_icerik']; ?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+
+
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Hakkımızda Video<span class="required">*</span>
                         </label>

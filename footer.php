@@ -14,6 +14,8 @@ if(!$ayarcek){
 ?>
 
 
+
+
 <div class="f-widget"><!--footer Widget-->
 		<div class="container">
 			<div class="row">
